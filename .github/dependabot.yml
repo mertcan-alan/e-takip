@@ -8,6 +8,10 @@ updates:
       time: "06:00"
       timezone: Europe/Istanbul
     open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
     groups:
       npm-development:
         dependency-type: development
@@ -19,3 +23,7 @@ updates:
     schedule:
       interval: monthly
     open-pull-requests-limit: 3
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
