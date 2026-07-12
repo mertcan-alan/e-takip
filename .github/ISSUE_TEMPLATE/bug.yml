@@ -1,0 +1,69 @@
+name: Hata bildirimi
+description: Tekrarlanabilir bir yazılım hatasını bildirin
+title: "[Hata]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Teşekkürler. Lütfen yalnızca kurgusal veri kullanın. Gerçek hasta, reçete, kimlik veya erişim bilgisi paylaşmayın. Güvenlik açıklarını herkese açık issue yerine SECURITY.md süreciyle bildirin.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Ön kontroller
+      options:
+        - label: Açık ve kapalı issue'larda aynı sorunu aradım.
+          required: true
+        - label: Bu bildirim gerçek kişisel veya sağlık verisi içermiyor.
+          required: true
+        - label: Bunun gizli bildirilmesi gereken bir güvenlik açığı olmadığını doğruladım.
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: Sürüm veya commit
+      description: Örneğin 1.0.0 veya commit özeti
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: İşletim sistemi
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Diğer
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Sorun
+      description: Ne oldu ve ne olmasını bekliyordunuz?
+      placeholder: Kısa ve açık bir açıklama yazın.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Tekrarlama adımları
+      placeholder: |
+        1. Uygulamayı aç
+        2. ... ekranına git
+        3. ... işlemini yap
+        4. Hatayı gözlemle
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log veya ekran görüntüsü
+      description: Hassas verileri kaldırarak ilgili çıktıyı ekleyin.
+      render: shell
+  - type: textarea
+    id: context
+    attributes:
+      label: Ek bağlam
+      description: Sorunu anlamaya yardımcı olabilecek diğer ayrıntılar.

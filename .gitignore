@@ -1,0 +1,47 @@
+node_modules/
+dist/
+dist-electron/
+release/
+
+# Test ve kalite raporları
+coverage/
+.nyc_output/
+
+# Yerel veritabanları ve SQLite yan dosyaları
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+
+# Ortam dosyaları (örnek dosya repoda tutulur)
+.env
+.env.*
+!.env.example
+
+# Anahtarlar, sertifikalar ve imzalama materyalleri
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+*.csr
+*.jks
+*.keystore
+
+# Yedekler ve geçici çalışma dosyaları
+backup/
+backups/
+*.bak
+*.backup
+tmp/
+temp/
+*.tmp
+*.temp
+
+# İşletim sistemi ve araç çıktıları
+.DS_Store
+Thumbs.db
+*.log
+*.local

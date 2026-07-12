@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="e-Takip yerel kayıt yönetim uygulaması" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#263843" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' http://127.0.0.1:5173 ws://127.0.0.1:5173"
+    />
+    <title>e-Takip · Yönetim Sistemi</title>
+
+    <!-- Drag region for frameless window titlebar -->
+    <style>
+      #app-drag-region {
+        -webkit-app-region: drag;
+      }
+      button, input, a, [role="button"] {
+        -webkit-app-region: no-drag;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
+</html>

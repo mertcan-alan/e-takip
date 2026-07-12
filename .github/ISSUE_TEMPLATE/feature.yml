@@ -1,0 +1,57 @@
+name: Özellik isteği
+description: Kapsamlı ve gerekçeli bir iyileştirme önerin
+title: "[Özellik]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Öneriniz için teşekkürler. Bu proje resmî kurum entegrasyonu, tıbbi doğruluk veya KVKK uyumluluğu iddiasında bulunmaz. Lütfen yalnızca kurgusal örnekler kullanın.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Ön kontroller
+      options:
+        - label: Açık ve kapalı issue'larda benzer bir istek aradım.
+          required: true
+        - label: Öneri gerçek kişisel veya sağlık verisi içermiyor.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Çözülmek istenen sorun
+      description: Kullanıcı hangi durumda, neden zorlanıyor?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Önerilen çözüm
+      description: Beklenen davranışı ve kullanıcı akışını anlatın.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Değerlendirilen alternatifler
+      description: Varsa başka çözüm yaklaşımlarını ve ödünleşimleri yazın.
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Etkilenen alan
+      options:
+        - Hasta kayıtları
+        - Reçete akışı
+        - Raporlar ve işlem günlüğü
+        - Güvenlik ve yetkilendirme
+        - Erişilebilirlik ve tasarım
+        - Geliştirici deneyimi
+        - Diğer
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Veri ve güvenlik etkisi
+      description: Önerinin kişisel veri, yetki, kalıcılık veya geriye uyumluluk etkisini açıklayın.

@@ -1,0 +1,79 @@
+{
+  "name": "e-takip",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Yerel kayıt ve reçete takip yönetim uygulaması",
+  "author": {
+    "name": "Mertcan Alan",
+    "url": "https://github.com/mertcan-alan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mertcan-alan/e-takip.git"
+  },
+  "homepage": "https://github.com/mertcan-alan/e-takip#readme",
+  "bugs": {
+    "url": "https://github.com/mertcan-alan/e-takip/issues"
+  },
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "main": "dist-electron/main/index.js",
+  "scripts": {
+    "vite:dev": "cross-env RENDERER_ONLY=true vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:build": "npm run build && electron-builder",
+    "lint": "eslint src --ext .js,.jsx --report-unused-disable-directives --max-warnings 0",
+    "test": "node --test",
+    "db:clean": "node scripts/clean-db.js"
+  },
+  "dependencies": {
+    "sql.js": "^1.12.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^6.0.3",
+    "autoprefixer": "^10.4.17",
+    "cross-env": "^10.1.0",
+    "electron": "^43.1.0",
+    "electron-builder": "^26.15.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "lucide-react": "^0.321.0",
+    "postcss": "^8.4.35",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "tailwindcss": "^3.4.1",
+    "vite": "^8.1.4",
+    "vite-plugin-electron": "^1.1.0"
+  },
+  "build": {
+    "appId": "tr.local.etakip",
+    "productName": "e-Takip",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.medical"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
